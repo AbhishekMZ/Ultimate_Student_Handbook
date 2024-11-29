@@ -1,4 +1,4 @@
-# Student Success Tracking System
+# Ultimate Student Handbook
 
 A comprehensive digital platform to monitor and enhance student academic performance through personalized learning strategies.
 
