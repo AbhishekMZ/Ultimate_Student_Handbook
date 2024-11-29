@@ -1,18 +1,18 @@
 import sqlite3
-from datetime import datetime
 import json
+from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
-import numpy as np
-from tabulate import tabulate
-from database_manager import DatabaseManager, DatabaseValidationError
+from src import DB_PATH
+from src.core.database_manager import DatabaseManager
 
 class ProgressTracker:
-    def __init__(self, db_path='student_tracking.db'):
-        self.db = DatabaseManager(db_path)
+    def __init__(self):
+        self.db_path = DB_PATH
+        self.db_manager = DatabaseManager()
 
     def get_topic_progress(self, student_id, topic_id):
         """Get progress for a specific topic"""
-        with self.db.get_connection(commit_on_success=False) as conn:
+        with self.db_manager.get_connection(commit_on_success=False) as conn:
             cursor = conn.cursor()
             cursor.execute('''
                 SELECT progress_id, completion_status, understanding_level, 
@@ -33,14 +33,14 @@ class ProgressTracker:
                 'time_spent_hours': time_spent,
                 'notes': notes
             }
-            return self.db.update_progress(progress_data)
+            return self.db_manager.update_progress(progress_data)
         except (DatabaseValidationError, sqlite3.Error) as e:
             print(f"Error updating progress: {e}")
             return False
 
     def generate_progress_report(self, student_id, course_code):
         """Generate a detailed progress report for a course"""
-        with self.db.get_connection(commit_on_success=False) as conn:
+        with self.db_manager.get_connection(commit_on_success=False) as conn:
             cursor = conn.cursor()
             try:
                 cursor.execute('''
@@ -112,7 +112,7 @@ class ProgressTracker:
 
     def plot_progress_trends(self, student_id, course_code):
         """Generate and save progress visualization"""
-        with self.db.get_connection(commit_on_success=False) as conn:
+        with self.db_manager.get_connection(commit_on_success=False) as conn:
             cursor = conn.cursor()
             try:
                 cursor.execute('''

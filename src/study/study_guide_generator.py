@@ -2,10 +2,13 @@ import sqlite3
 import json
 from datetime import datetime
 import random
+from src import DB_PATH
+from src.core.database_manager import DatabaseManager
 
 class StudyGuideGenerator:
-    def __init__(self, db_path='student_tracking.db'):
-        self.db_path = db_path
+    def __init__(self):
+        self.db_path = DB_PATH
+        self.db_manager = DatabaseManager()
 
     def add_topic(self, textbook_id, chapter_number, topic_data):
         conn = sqlite3.connect(self.db_path)

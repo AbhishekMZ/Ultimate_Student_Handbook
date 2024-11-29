@@ -1,12 +1,17 @@
 import sqlite3
-from datetime import datetime
 import json
+from datetime import datetime
+import os
+from src import DB_PATH, DATA_DIR
+from src.core.database_manager import DatabaseManager
 from tabulate import tabulate
 from progress_tracker import ProgressTracker
 
 class StudyMaterialsBrowser:
-    def __init__(self, db_path='student_tracking.db'):
-        self.db_path = db_path
+    def __init__(self):
+        self.db_path = DB_PATH
+        self.db_manager = DatabaseManager()
+        self.materials_dir = os.path.join(DATA_DIR, 'raw', 'textbook_sections')
         self.courses = {
             'DBMS': 'Database Management Systems',
             'AISE': 'AI-integrated Software Engineering',
@@ -14,7 +19,7 @@ class StudyMaterialsBrowser:
             'ANN': 'Artificial Neural Networks',
             'PME': 'Principles of Management & Economics'
         }
-        self.progress_tracker = ProgressTracker(db_path)
+        self.progress_tracker = ProgressTracker(self.db_path)
 
     def list_courses(self):
         """Display available courses"""

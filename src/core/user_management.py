@@ -1,12 +1,14 @@
 import sqlite3
-import hashlib
-import secrets
-from datetime import datetime, timedelta
+import json
+from datetime import datetime
 import re
+from src import DB_PATH
+from .database_manager import DatabaseManager
 
-class UserManagement:
-    def __init__(self, db_path='student_tracking.db'):
-        self.db_path = db_path
+class UserManager:
+    def __init__(self):
+        self.db_path = DB_PATH
+        self.db_manager = DatabaseManager()
 
     def _get_connection(self):
         return sqlite3.connect(self.db_path)

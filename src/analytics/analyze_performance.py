@@ -1,9 +1,11 @@
 import sqlite3
 import json
 from datetime import datetime, timedelta
+from src import DB_PATH
+from src.core.database_manager import DatabaseManager
 
 def analyze_student_performance():
-    conn = sqlite3.connect('student_tracking.db')
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
     # Get performance metrics for each student

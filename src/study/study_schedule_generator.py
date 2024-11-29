@@ -1,14 +1,16 @@
 import sqlite3
-from datetime import datetime, timedelta
 import json
-from tabulate import tabulate
-import numpy as np
-from progress_tracker import ProgressTracker
+from datetime import datetime, timedelta
+import os
+from src import DB_PATH, DATA_DIR
+from src.core.database_manager import DatabaseManager
+from src.progress.progress_tracker import ProgressTracker
 
 class StudyScheduleGenerator:
-    def __init__(self, db_path='student_tracking.db'):
-        self.db_path = db_path
-        self.progress_tracker = ProgressTracker(db_path)
+    def __init__(self):
+        self.db_path = DB_PATH
+        self.db_manager = DatabaseManager()
+        self.progress_tracker = ProgressTracker()
 
     def get_student_workload(self, student_id):
         """Get current workload for student across all courses"""

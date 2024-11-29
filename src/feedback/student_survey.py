@@ -1,10 +1,16 @@
-import csv
-import os
+import sqlite3
+import json
 from datetime import datetime
-from statistics import mean, stdev
+import csv
+from src import DB_PATH, DATA_DIR
+from src.core.database_manager import DatabaseManager
+import os
 
 class StudentSurvey:
     def __init__(self):
+        self.db_path = DB_PATH
+        self.db_manager = DatabaseManager()
+        self.feedback_file = os.path.join(DATA_DIR, 'processed', 'csv', 'feedback.csv')
         self.questions = {
             'Technical': [
                 ('Programming', 'Rate your programming skills (1-5)', 0.8),

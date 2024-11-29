@@ -1,11 +1,14 @@
 import sqlite3
-from datetime import datetime, timedelta
 import json
-from collections import defaultdict, deque
+from datetime import datetime
+import networkx as nx
+from src import DB_PATH
+from src.core.database_manager import DatabaseManager
 
 class LearningPathGenerator:
-    def __init__(self, db_path='student_tracking.db'):
-        self.db_path = db_path
+    def __init__(self):
+        self.db_path = DB_PATH
+        self.db_manager = DatabaseManager()
 
     def add_topic_dependency(self, topic_id, prerequisite_topic_id, dependency_type='required'):
         conn = sqlite3.connect(self.db_path)
@@ -54,8 +57,7 @@ class LearningPathGenerator:
             topics = cursor.fetchall()
             
             # Build dependency graph
-            graph = defaultdict(list)
-            in_degree = defaultdict(int)
+            graph = nx.DiGraph()
             
             cursor.execute('''
             SELECT topic_id, prerequisite_topic_id
@@ -64,25 +66,10 @@ class LearningPathGenerator:
             ''')
             
             for topic_id, prereq_id in cursor.fetchall():
-                graph[prereq_id].append(topic_id)
-                in_degree[topic_id] += 1
+                graph.add_edge(prereq_id, topic_id)
 
-            # Topological sort with priority queue
-            queue = deque()
-            for topic in topics:
-                topic_id = topic[0]
-                if in_degree[topic_id] == 0:
-                    queue.append(topic_id)
-
-            learning_path = []
-            while queue:
-                current_topic = queue.popleft()
-                learning_path.append(current_topic)
-                
-                for next_topic in graph[current_topic]:
-                    in_degree[next_topic] -= 1
-                    if in_degree[next_topic] == 0:
-                        queue.append(next_topic)
+            # Topological sort
+            learning_path = list(nx.topological_sort(graph))
 
             # Generate detailed learning path with time estimates
             detailed_path = []
