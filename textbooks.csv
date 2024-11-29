@@ -1,0 +1,21 @@
+TextbookID,Subject,Title,Author,Edition,ISBN,CourseCode
+DBMS_TB1,Database Management Systems,Fundamentals of Database Systems,Elmasri and Navathe,7th,978-0133970777,CD252IA
+DBMS_TB2,Database Management Systems,NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence,Pramod J Sadalage and Martin Fowler,1st,978-0321826626,CD252IA
+DBMS_TB3,Database Management Systems,Database Management Systems,Raghu Ramakrishnan and Johannes Gehrke,3rd,978-0072465631,CD252IA
+DBMS_TB4,Database Management Systems,Big Data and Analytics,Seema Acharya and Subhashini Chellappan,2nd,978-8126551903,CD252IA
+AISE_TB1,AI Software Engineering,Software Engineering,Ian Sommerville,10th,978-0133943030,AI255TBA
+AISE_TB2,AI Software Engineering,Artificial Intelligence Methods for Software Engineering,Meir Kalech et al.,1st,978-9811239922,AI255TBA
+AISE_TB3,AI Software Engineering,Software Engineering: A Practitioners Approach,Roger S. Pressman,8th,978-0078022128,AI255TBA
+AISE_TB4,AI Software Engineering,Fundamentals of Software Engineering,Rajib Mall,4th,978-8120348981,AI255TBA
+MLOPS_TB1,MLOps,Introducing MLOps,Mark Treveil and Dataiku Team,1st,978-1492083290,AI254TA
+MLOPS_TB2,MLOps,Practical MLOps,Noah Gift and Alfredo Deza,1st,978-1098103019,AI254TA
+MLOPS_TB3,MLOps,MLOps: Operationalizing Data Science,David Sweenor et al.,1st,978-1492074656,AI254TA
+MLOPS_TB4,MLOps,Engineering MLOps,Emmanuel Raj,1st,978-1800566323,AI254TA
+ANN_TB1,Neural Networks,Neural Networks: A Comprehensive Foundation,Simon Haykin,2nd,978-0132733502,AI253IA
+ANN_TB2,Neural Networks,Neural Networks and Deep Learning: A Textbook,Charu C Aggarwal,1st,978-3319944623,AI253IA
+ANN_TB3,Neural Networks,Deep Learning,Ian Goodfellow et al.,1st,978-0262035613,AI253IA
+ANN_TB4,Neural Networks,Fundamentals of Artificial Neural Networks,M H Hassoun,1st,978-0262514675,AI253IA
+PME_TB1,Management,Management,Stephen Robbins et al.,15th,978-0135581858,HS251TA
+PME_TB2,Management,Management,James Stoner et al.,6th,978-8120309814,HS251TA
+PME_TB3,Economics,Principles of Microeconomics,Steven A. Greenlaw and David Shapiro,2nd,978-1947172340,HS251TA
+PME_TB4,Economics,Macroeconomics: Theory and Policy,Dwivedi D.N,5th,978-9353163334,HS251TA

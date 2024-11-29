@@ -1,0 +1,26 @@
+ChapterID,TextbookID,ChapterNumber,ChapterTitle,ChapterSummary,CourseCode,Hours
+DBMS_U1,DBMS_TB1,1,"Introduction to Database Systems","Databases and Database users, Data Models, Three-schema Architecture",CD252IA,9
+DBMS_U2,DBMS_TB1,2,"Relational Model and Algebra","ER Design, Relational Model Concepts, Relational Operations",CD252IA,9
+DBMS_U3,DBMS_TB1,3,"SQL and Database Design","SQL Fundamentals, Functional Dependencies, Normal Forms",CD252IA,9
+DBMS_U4,DBMS_TB1,4,"Transaction Processing","Transaction concepts, Serializability, Concurrency Control",CD252IA,9
+DBMS_U5,DBMS_TB1,5,"NoSQL and Big Data","NoSQL Models, Distribution models, Hadoop, MapReduce",CD252IA,9
+AISE_U1,AISE_TB1,1,"Software Engineering Fundamentals","Professional Development, Ethics, Software Processes",AI255TBA,9
+AISE_U2,AISE_TB1,2,"Requirements and System Modeling","Requirements Engineering, System Models, Architectural Design",AI255TBA,9
+AISE_U3,AISE_TB1,3,"Development and Testing","OO Design, Testing Methods, Software Evolution",AI255TBA,9
+AISE_U4,AISE_TB1,4,"AI in Code Reviews","ML for Code Reviews, Auto-Generation of Software",AI255TBA,9
+AISE_U5,AISE_TB1,5,"ML in Testing","ML Applications in Testing, Test Oracles",AI255TBA,9
+MLOPS_U1,MLOPS_TB1,1,"MLOps Fundamentals","MLOps Challenges, Roles, and Architecture",AI254TA,9
+MLOPS_U2,MLOPS_TB1,2,"Model Development","ML Features, Model Development, Version Management",AI254TA,9
+MLOPS_U3,MLOPS_TB1,3,"Production Preparation","Environments, Risk Evaluation, Quality Assurance",AI254TA,9
+MLOPS_U4,MLOPS_TB1,4,"Deployment","CI/CD Pipelines, Deployment Strategies, Feedback Loop",AI254TA,9
+MLOPS_U5,MLOPS_TB1,5,"Governance","Model Governance, Monitoring, Logging",AI254TA,9
+ANN_U1,ANN_TB1,1,"Neural Networks Basics","Neuron Models, Learning Processes, Perceptron",AI253IA,9
+ANN_U2,ANN_TB1,2,"Convolutional Neural Networks","CNN Architecture, Training, Applications",AI253IA,9
+ANN_U3,ANN_TB1,3,"Recurrent Neural Networks","RNN Types, LSTM, Applications",AI253IA,9
+ANN_U4,ANN_TB1,4,"Deep Reinforcement Learning","RL Framework, Deep Learning Models, Case Studies",AI253IA,9
+ANN_U5,ANN_TB1,5,"Advanced Topics","Attention Mechanisms, GANs",AI253IA,9
+PME_U1,PME_TB1,1,"Management Fundamentals","Management Functions, History, Approaches",HS251TA,6
+PME_U2,PME_TB1,2,"Planning and Organization","Strategic Management, Organizational Structure",HS251TA,10
+PME_U3,PME_TB1,3,"Motivation and Leadership","Motivation Theories, Leadership Styles",HS251TA,10
+PME_U4,PME_TB1,4,"Microeconomics","Demand-Supply, Elasticity, Market Structures",HS251TA,10
+PME_U5,PME_TB1,5,"Macroeconomics","Economic Indicators, GDP, Economic Models",HS251TA,9
