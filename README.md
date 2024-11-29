@@ -2,6 +2,44 @@
 
 A comprehensive digital platform to monitor and enhance student academic performance through personalized learning strategies.
 
+## Project Structure
+
+```
+student_tracking_system/
+├── src/                      # Source code
+│   ├── core/                 # Core functionality
+│   │   ├── database_manager.py
+│   │   └── user_management.py
+│   ├── analytics/           # Analytics and performance tracking
+│   │   ├── analyze_performance.py
+│   │   ├── analyze_curriculum.py
+│   │   └── topic_processor.py
+│   ├── study/              # Study material management
+│   │   ├── study_guide_generator.py
+│   │   ├── study_materials_browser.py
+│   │   └── study_schedule_generator.py
+│   ├── progress/           # Progress tracking
+│   │   ├── progress_tracker.py
+│   │   └── learning_path_generator.py
+│   ├── feedback/           # Student feedback and goals
+│   │   ├── student_survey.py
+│   │   └── generate_goals.py
+│   └── utils/              # Utility functions
+│       └── read_pdf.py
+├── data/                   # Data files
+│   ├── raw/               # Raw data files
+│   │   ├── textbooks/
+│   │   └── textbook_sections/
+│   └── processed/         # Processed data files
+│       ├── csv/
+│       └── json/
+├── scripts/               # Setup and maintenance scripts
+│   ├── setup/
+│   └── data_generation/
+├── tests/                 # Test files
+└── docs/                  # Documentation
+```
+
 ## Features
 
 - Student progress tracking
@@ -21,23 +59,11 @@ A comprehensive digital platform to monitor and enhance student academic perform
   - numpy
   - tabulate
 
-## Project Structure
-
-- `database_manager.py`: Core database operations and validation
-- `progress_tracker.py`: Student progress monitoring
-- `study_materials_browser.py`: Study material management
-- `study_schedule_generator.py`: Intelligent schedule creation
-- `analyze_performance.py`: Performance analytics
-- `study_guide_generator.py`: Automated study guide creation
-- `user_management.py`: User account management
-- `student_survey.py`: Student feedback collection
-- `generate_goals.py`: Learning goal generation
-
 ## Setup
 
 1. Clone the repository
 ```bash
-git clone [repository-url]
+git clone https://github.com/AbhishekMZ/Ultimate_Student_Handbook.git
 cd student_tracking_system
 ```
 
@@ -48,16 +74,32 @@ pip install -r requirements.txt
 
 3. Initialize the database
 ```bash
-python reset_database.py
+python scripts/setup/reset_database.py
 ```
 
-## Usage
+## Module Overview
 
-1. Start by adding students and courses
-2. Track progress through the progress tracker
-3. Generate personalized study materials
-4. Analyze performance metrics
-5. Create and adjust study schedules
+### Core (`src/core/`)
+- `database_manager.py`: Core database operations and validation
+- `user_management.py`: User account management
+
+### Analytics (`src/analytics/`)
+- `analyze_performance.py`: Student performance analysis
+- `analyze_curriculum.py`: Curriculum analysis
+- `topic_processor.py`: Topic processing and analysis
+
+### Study (`src/study/`)
+- `study_guide_generator.py`: Automated study guide creation
+- `study_materials_browser.py`: Study material management
+- `study_schedule_generator.py`: Schedule generation
+
+### Progress (`src/progress/`)
+- `progress_tracker.py`: Student progress monitoring
+- `learning_path_generator.py`: Personalized learning paths
+
+### Feedback (`src/feedback/`)
+- `student_survey.py`: Student feedback collection
+- `generate_goals.py`: Learning goal generation
 
 ## Contributing
 

@@ -1,0 +1,53 @@
+student_tracking_system/
+├── src/
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── database_manager.py
+│   │   └── user_management.py
+│   ├── analytics/
+│   │   ├── __init__.py
+│   │   ├── analyze_performance.py
+│   │   ├── analyze_curriculum.py
+│   │   └── topic_processor.py
+│   ├── study/
+│   │   ├── __init__.py
+│   │   ├── study_guide_generator.py
+│   │   ├── study_materials_browser.py
+│   │   └── study_schedule_generator.py
+│   ├── progress/
+│   │   ├── __init__.py
+│   │   ├── progress_tracker.py
+│   │   └── learning_path_generator.py
+│   ├── feedback/
+│   │   ├── __init__.py
+│   │   ├── student_survey.py
+│   │   └── generate_goals.py
+│   └── utils/
+│       ├── __init__.py
+│       └── read_pdf.py
+├── data/
+│   ├── raw/
+│   │   ├── textbooks/
+│   │   └── textbook_sections/
+│   └── processed/
+│       ├── csv/
+│       │   ├── courses.csv
+│       │   ├── chapters.csv
+│       │   ├── students.csv
+│       │   └── feedback.csv
+│       └── json/
+│           └── improvement_plans.json
+├── scripts/
+│   ├── setup/
+│   │   ├── create_database.py
+│   │   ├── create_tables.py
+│   │   └── reset_database.py
+│   └── data_generation/
+│       ├── generate_student_data.py
+│       └── generate_exam_results.py
+├── tests/
+│   └── test_data_manager.py
+├── docs/
+│   └── README.md
+├── requirements.txt
+└── .gitignore
