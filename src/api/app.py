@@ -5,10 +5,14 @@ from src.analytics.analyze_performance import PerformanceAnalyzer
 from src.progress.progress_tracker import ProgressTracker
 from src.study.study_materials_browser import StudyMaterialsBrowser
 from src.feedback.student_survey import SurveyManager
+from .swagger import spec, swagger_ui_blueprint, SWAGGER_URL
 import sqlite3
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
+
+# Register Swagger UI blueprint
+app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 
 # Initialize components
 db_manager = DatabaseManager()
@@ -216,6 +220,13 @@ def get_dashboard_summary():
             })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/api/swagger.json')
+def create_swagger_spec():
+    """
+    Serve the Swagger specification
+    """
+    return jsonify(spec.to_dict())
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
