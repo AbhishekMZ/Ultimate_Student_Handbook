@@ -21,8 +21,11 @@ wheels/
 .installed.cfg
 *.egg
 
-# SQLite database
-*.db
+# Virtual Environment
+venv/
+.env
+.venv
+ENV/
 
 # IDE
 .idea/
@@ -30,11 +33,37 @@ wheels/
 *.swp
 *.swo
 
-# Environment
-.env
-venv/
-ENV/
+# Database
+*.db
+*.sqlite3
 
-# OS
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend
+node_modules/
+/dbms frontend/build/
+/dbms frontend/.env
 .DS_Store
-Thumbs.db
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+coverage/
+
+# Documentation
+/docs/_build/
+
+# Temporary files
+*.bak
+*.tmp
+*~
