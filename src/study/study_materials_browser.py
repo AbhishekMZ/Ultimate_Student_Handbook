@@ -5,7 +5,7 @@ import os
 from src import DB_PATH, DATA_DIR
 from src.core.database_manager import DatabaseManager
 from tabulate import tabulate
-from progress_tracker import ProgressTracker
+from src.progress.progress_tracker import ProgressTracker
 
 class StudyMaterialsBrowser:
     def __init__(self):
@@ -19,7 +19,7 @@ class StudyMaterialsBrowser:
             'ANN': 'Artificial Neural Networks',
             'PME': 'Principles of Management & Economics'
         }
-        self.progress_tracker = ProgressTracker(self.db_path)
+        self.progress_tracker = ProgressTracker()
 
     def list_courses(self):
         """Display available courses"""

@@ -6,7 +6,7 @@ from src import DB_PATH, DATA_DIR
 from src.core.database_manager import DatabaseManager
 import os
 
-class StudentSurvey:
+class SurveyManager:
     def __init__(self):
         self.db_path = DB_PATH
         self.db_manager = DatabaseManager()
@@ -235,7 +235,7 @@ class StudentSurvey:
 
 def main():
     try:
-        survey = StudentSurvey()
+        survey = SurveyManager()
         
         print("Welcome to Student Skill Assessment")
         print("Available Student IDs: ST001, ST002")
