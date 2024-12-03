@@ -29,7 +29,8 @@ target_metadata = Base.metadata
 # ... etc.
 
 def get_url():
-    return os.getenv("DATABASE_URL", "sqlite:///./data/student_tracking.db")
+    db_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "database", "student_tracking.db")
+    return os.getenv("DATABASE_URL", f"sqlite:///{db_path}")
 
 def run_migrations_offline() -> None:
     """Run migrations in 'offline' mode.

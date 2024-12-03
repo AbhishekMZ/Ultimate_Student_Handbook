@@ -198,5 +198,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Mishael Abhishek Zakkam  - mabhishekz.ai22@rvce.edu.in
 Project Link: [https://github.com/yourusername/student_tracking_system](https://github.com/yourusername/student_tracking_system)
