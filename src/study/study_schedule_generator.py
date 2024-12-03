@@ -2,9 +2,9 @@ import sqlite3
 import json
 from datetime import datetime, timedelta
 import os
-from src import DB_PATH, DATA_DIR
-from src.core.database_manager import DatabaseManager
-from src.progress.progress_tracker import ProgressTracker
+from backend.database.database import DB_PATH
+from backend.core.database_manager import DatabaseManager
+from ..progress.progress_tracker import ProgressTracker
 
 class StudyScheduleGenerator:
     def __init__(self):

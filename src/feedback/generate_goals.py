@@ -2,8 +2,8 @@ import sqlite3
 import json
 from datetime import datetime
 import os
-from src import DB_PATH, DATA_DIR
-from src.core.database_manager import DatabaseManager
+from backend.database.database import DB_PATH
+from backend.core.database_manager import DatabaseManager
 
 # Skill improvement strategies
 IMPROVEMENT_STRATEGIES = {

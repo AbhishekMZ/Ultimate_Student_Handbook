@@ -2,8 +2,8 @@ import sqlite3
 import json
 from datetime import datetime
 import random
-from src import DB_PATH
-from src.core.database_manager import DatabaseManager
+from backend.database.database import DB_PATH
+from backend.core.database_manager import DatabaseManager
 
 class StudyGuideGenerator:
     def __init__(self):

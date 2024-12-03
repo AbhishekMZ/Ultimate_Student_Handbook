@@ -3,7 +3,7 @@ import os
 import tempfile
 import sqlite3
 from src.api.app import app
-from src.core.database_manager import DatabaseManager
+from backend.core.database_manager import DatabaseManager
 
 @pytest.fixture
 def client():

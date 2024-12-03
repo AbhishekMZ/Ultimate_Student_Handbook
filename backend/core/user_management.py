@@ -2,7 +2,7 @@ import sqlite3
 import json
 from datetime import datetime
 import re
-from src import DB_PATH
+from ..database.database import DB_PATH
 from .database_manager import DatabaseManager
 
 class UserManager:

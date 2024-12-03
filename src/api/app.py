@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from src.core.database_manager import DatabaseManager
+from backend.core.database_manager import DatabaseManager
+from backend.api.student_performance import bp as student_performance_bp
 from src.analytics.analyze_performance import PerformanceAnalyzer
 from src.progress.progress_tracker import ProgressTracker
 from src.study.study_materials_browser import StudyMaterialsBrowser
@@ -13,6 +14,7 @@ CORS(app)  # Enable CORS for all routes
 
 # Register Swagger UI blueprint
 app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
+app.register_blueprint(student_performance_bp)
 
 # Initialize components
 db_manager = DatabaseManager()

@@ -8,6 +8,7 @@ import Students from './pages/Students';
 import Courses from './pages/Courses';
 import Progress from './pages/Progress';
 import Analytics from './pages/Analytics';
+import StudentDetails from './pages/StudentDetails';
 
 // Create a theme instance
 const theme = createTheme({
@@ -46,6 +47,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/students" element={<Students />} />
+              <Route path="/student/:studentId" element={<StudentDetails />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/progress" element={<Progress />} />
               <Route path="/analytics" element={<Analytics />} />

@@ -2,8 +2,8 @@ import sqlite3
 import json
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
-from src import DB_PATH
-from src.core.database_manager import DatabaseManager
+from backend.database.database import DB_PATH
+from backend.core.database_manager import DatabaseManager
 
 class ProgressTracker:
     def __init__(self):

@@ -1,4 +1,4 @@
-from database_manager import DatabaseManager, DatabaseValidationError
+from backend.core.database_manager import DatabaseManager, DatabaseValidationError
 import sqlite3
 
 def test_data_consistency():

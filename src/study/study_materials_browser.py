@@ -2,10 +2,10 @@ import sqlite3
 import json
 from datetime import datetime
 import os
-from src import DB_PATH, DATA_DIR
-from src.core.database_manager import DatabaseManager
+from backend.database.database import DB_PATH
+from backend.core.database_manager import DatabaseManager
 from tabulate import tabulate
-from src.progress.progress_tracker import ProgressTracker
+from ..progress.progress_tracker import ProgressTracker
 
 class StudyMaterialsBrowser:
     def __init__(self):

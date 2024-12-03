@@ -2,8 +2,8 @@ import sqlite3
 import json
 from datetime import datetime
 import csv
-from src import DB_PATH, DATA_DIR
-from src.core.database_manager import DatabaseManager
+from backend.database.database import DB_PATH
+from backend.core.database_manager import DatabaseManager
 import os
 
 class SurveyManager:
