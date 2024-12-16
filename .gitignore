@@ -31,15 +31,16 @@ ENV/
 *.swp
 *.swo
 
+# Environment variables
+.env
+
 # Database
 *.db
 *.sqlite3
 
-# Environment variables
-.env
-
 # Logs
 *.log
+logs/
 
 # System Files
 .DS_Store
