@@ -13,3 +13,4 @@ beanie
 passlib[bcrypt]
 redis
 websockets
+bson
