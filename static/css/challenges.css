@@ -1,0 +1,239 @@
+/* Challenge System Styles */
+.challenges-panel {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.challenges-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.challenges-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.challenges-tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid var(--bg-tertiary);
+    padding-bottom: 10px;
+}
+
+.challenges-tabs .tab {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.challenges-tabs .tab:hover {
+    background: var(--bg-tertiary);
+}
+
+.challenges-tabs .tab.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.challenges-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.challenges-list.hidden {
+    display: none;
+}
+
+.challenge-card {
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-2px);
+}
+
+.challenge-icon {
+    font-size: 24px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-accent);
+    border-radius: 8px;
+}
+
+.challenge-info {
+    flex-grow: 1;
+}
+
+.challenge-info h4 {
+    margin: 0 0 5px 0;
+    color: var(--text-primary);
+}
+
+.challenge-info p {
+    margin: 0 0 10px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.challenge-rewards {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.xp-reward, .skill-reward {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    background: var(--bg-accent);
+}
+
+.xp-reward {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.skill-reward {
+    color: var(--text-secondary);
+}
+
+.accept-challenge {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accept-challenge:hover {
+    background: var(--primary-dark);
+}
+
+.challenge-progress {
+    margin-top: 10px;
+}
+
+.requirement {
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--bg-accent);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.challenge-completion {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.completion-date {
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rewards-earned {
+    display: flex;
+    gap: 8px;
+}
+
+.xp-earned, .skill-earned {
+    padding: 2px 6px;
+    border-radius: 10px;
+    background: var(--bg-accent);
+}
+
+.xp-earned {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.skill-earned {
+    color: var(--text-secondary);
+}
+
+/* Challenge Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification.success {
+    background: var(--success-color, #4CAF50);
+}
+
+.notification.error {
+    background: var(--error-color, #f44336);
+}
+
+.notification.info {
+    background: var(--primary-color);
+}
+
+.notification.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

@@ -1,103 +1,137 @@
-# Student Handbook
+# Ultimate Student Handbook
 
-A comprehensive web application for students to manage their academic life. This application helps students keep track of their notes, tasks, and schedule in one place.
+A comprehensive web application designed to help students manage their academic life efficiently while staying motivated through gamification.
 
 ## Features
 
-- **User Authentication**
-  - Secure login and registration system
-  - Session management for protected routes
+### Core Features
+- Note Management
+- Task Tracking
+- Schedule Organization
+- Progress Monitoring
 
-- **Notes Management**
-  - Create and view personal notes
-  - Organize notes with titles and timestamps
-  - Rich text editing capabilities
+### Gamification System
 
-- **Task Management**
-  - Create and track tasks
-  - Set due dates for tasks
-  - Mark tasks as complete/incomplete
-  - View tasks by status and due date
+#### Phase 1: Core Gamification
+1. **Achievement System**
+   - Academic achievements (Course Master, Perfect Attendance, etc.)
+   - Progress tracking for each achievement
+   - Real-time achievement updates
+   - Achievement showcase
 
-- **Dashboard**
-  - Clean and intuitive user interface
-  - Quick access to all features
-  - Responsive design for all devices
+2. **Experience Points (XP)**
+   - Activity-based XP rewards
+   - Level progression system
+   - Milestone tracking
+   - Performance statistics
 
-## Technology Stack
+3. **Progress Tracking**
+   - Daily login streaks
+   - Study session monitoring
+   - Task completion rates
+   - Performance analytics
 
-- **Backend**
-  - Flask (Python web framework)
-  - MongoDB (Database)
-  - Flask-CORS (Cross-Origin Resource Sharing)
+#### Phase 2: Advanced Features
+1. **Challenge System**
+   - Daily Challenges
+   - Weekly Missions
+   - Monthly Quests
+   - Custom Challenge Creation
 
-- **Frontend**
-  - HTML5
-  - CSS3 (Modern styling with Flexbox and Grid)
-  - JavaScript (ES6+)
-  - Responsive Design
+2. **Skill Levels**
+   - Study Skills progression
+   - Organization mastery
+   - Time Management expertise
+   - Focus tracking
 
-## Project Structure
+3. **Progress Visualization**
+   - Achievement galleries
+   - Performance graphs
+   - Activity heatmaps
+   - Skill progression charts
 
-```
-student_tracking_system/
-├── static/
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       └── dashboard.js
-├── templates/
-│   ├── login.html
-│   ├── register.html
-│   └── dashboard.html
-├── app.py
-└── requirements.txt
-```
+4. **Advanced Rewards**
+   - Custom themes
+   - Profile badges
+   - Feature unlocks
+   - Special status indicators
 
-## Setup Instructions
+## Technical Details
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd student_tracking_system
-```
+### Backend
+- Flask web framework
+- MongoDB database
+- Async support for better performance
+- RESTful API architecture
 
-2. Install Python dependencies:
-```bash
-pip install -r requirements.txt
-```
+### Frontend
+- Modern JavaScript
+- Dynamic UI updates
+- Real-time progress tracking
+- Interactive achievements
 
-3. Start MongoDB service
+### Gamification API Endpoints
 
-4. Run the application:
-```bash
-python app.py
-```
+#### Progress Endpoints
+- GET `/api/progress` - Get user's current progress
+- GET `/api/achievements` - Get user's achievements
+- POST `/api/daily-login` - Record daily login
+- POST `/api/record-activity` - Record user activity
+- POST `/api/study-session` - Record study session
 
-5. Access the application at `http://localhost:5000`
+#### Challenge System Endpoints (Coming Soon)
+- GET `/api/challenges` - Get available challenges
+- GET `/api/challenges/active` - Get user's active challenges
+- POST `/api/challenges/accept` - Accept a challenge
+- POST `/api/challenges/complete` - Complete a challenge
 
-## Usage
+#### Skill System Endpoints (Coming Soon)
+- GET `/api/skills` - Get user's skill levels
+- GET `/api/skills/progress` - Get skill progression
+- POST `/api/skills/update` - Update skill progress
 
-1. Register a new account or login with existing credentials
-2. Use the dashboard to:
-   - Create and manage notes
-   - Add and track tasks
-   - View your calendar
-   - Update your profile
+## XP Rewards System
 
-## Development
+### Activity Rewards
+- Creating notes: 10 XP
+- Completing tasks: 20 XP
+- Meeting deadlines: 30 XP
+- Daily login: 5 XP
+- Study streak: 15 XP per day
 
-- The application uses Flask's blueprint structure for scalability
-- MongoDB is used for flexible document storage
-- Frontend is built with vanilla JavaScript for simplicity and performance
-- Responsive design ensures compatibility across devices
+### Achievement Rewards
+- Course Master: 100 XP
+- Perfect Attendance: 50 XP
+- Novice Note Taker: 30 XP
+- Expert Note Taker: 100 XP
+- Time Manager: 75 XP
 
-## Security Features
+## Setup and Installation
 
-- Password hashing for user security
-- Session-based authentication
-- Protected API endpoints
-- CORS protection
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up MongoDB
+4. Configure environment variables
+5. Run the application:
+   ```bash
+   python app.py
+   ```
+
+## Development Guidelines
+
+### Adding New Achievements
+1. Define achievement in `ACHIEVEMENTS` dictionary in `models/gamification.py`
+2. Add achievement logic in `GamificationSystem.check_achievements()`
+3. Update frontend to display new achievement
+
+### Adding New Activities
+1. Add XP reward in `XP_REWARDS` dictionary
+2. Implement activity tracking in `UserProgress.record_activity()`
+3. Add API endpoint if needed
+4. Update frontend to support new activity
 
 ## Contributing
 
@@ -109,4 +143,4 @@ python app.py
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License - See LICENSE file for details

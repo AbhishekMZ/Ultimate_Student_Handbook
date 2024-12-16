@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Handbook - Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gamification.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/challenges.css') }}">
 </head>
 <body>
     <nav class="dashboard-nav">
@@ -100,5 +102,7 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gamification.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/challenges.js') }}"></script>
 </body>
 </html>
