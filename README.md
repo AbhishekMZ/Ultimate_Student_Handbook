@@ -1,202 +1,112 @@
-# Student Tracking System
+# Student Handbook
 
-A comprehensive student performance management platform with advanced data tracking and analytics capabilities.
+A comprehensive web application for students to manage their academic life. This application helps students keep track of their notes, tasks, and schedule in one place.
 
-## 🚀 Features
+## Features
 
-- **Authentication System**
-  - JWT-based authentication
-  - Secure password hashing (PBKDF2-SHA256)
-  - Multi-device support
-  - Session management
+- **User Authentication**
+  - Secure login and registration system
+  - Session management for protected routes
 
-- **Student Performance Analytics**
-  - Real-time grade tracking
-  - Course progress monitoring
-  - Performance metrics visualization
-  - Personalized recommendations
+- **Notes Management**
+  - Create and view personal notes
+  - Organize notes with titles and timestamps
+  - Rich text editing capabilities
 
-- **Notification System**
-  - Real-time notifications
-  - Multiple notification types
-  - Read/unread status tracking
-  - Custom notification creation
+- **Task Management**
+  - Create and track tasks
+  - Set due dates for tasks
+  - Mark tasks as complete/incomplete
+  - View tasks by status and due date
 
-- **Device Synchronization**
-  - Multi-device data sync
-  - Offline support
-  - Conflict resolution
-  - Real-time updates
+- **Dashboard**
+  - Clean and intuitive user interface
+  - Quick access to all features
+  - Responsive design for all devices
 
-## 🛠️ Technology Stack
+## Technology Stack
 
-### Backend
-- Python
-- Flask (Web Framework)
-- SQLite (Database)
-- JWT (Authentication)
-- PBKDF2-SHA256 (Password Hashing)
+- **Backend**
+  - Flask (Python web framework)
+  - MongoDB (Database)
+  - Flask-CORS (Cross-Origin Resource Sharing)
 
-### Frontend
-- React
-- Material-UI
-- Axios
-- React Router
-- Context API
+- **Frontend**
+  - HTML5
+  - CSS3 (Modern styling with Flexbox and Grid)
+  - JavaScript (ES6+)
+  - Responsive Design
 
-## 📋 Prerequisites
-
-- Python 3.8+
-- Node.js 14+
-- npm 6+
-- Git
-
-## 🔧 Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/student_tracking_system.git
-cd student_tracking_system
-```
-
-2. **Set up the backend**
-```bash
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your configuration
-```
-
-3. **Set up the frontend**
-```bash
-cd frontend
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your configuration
-```
-
-## 🚀 Running the Application
-
-1. **Start the backend server**
-```bash
-# From the root directory
-python src/api/routes.py
-```
-
-2. **Start the frontend development server**
-```bash
-# From the frontend directory
-npm start
-```
-
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 student_tracking_system/
-├── src/
-│   ├── core/
-│   │   ├── auth.py          # Authentication logic
-│   │   ├── analytics.py     # Performance analytics
-│   │   ├── notifications.py # Notification system
-│   │   ├── sync.py         # Device synchronization
-│   │   └── app.py          # Main application class
-│   └── api/
-│       └── routes.py        # API endpoints
-├── frontend/
-│   ├── src/
-│   │   ├── components/     # React components
-│   │   ├── contexts/       # React contexts
-│   │   ├── hooks/         # Custom hooks
-│   │   ├── services/      # API services
-│   │   └── utils/         # Utility functions
-│   ├── public/
-│   └── package.json
-├── data/                   # SQLite database
-├── docs/                   # Documentation
-├── tests/                  # Test files
-├── requirements.txt        # Python dependencies
-├── .env.example           # Environment variables template
-└── README.md
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── dashboard.js
+├── templates/
+│   ├── login.html
+│   ├── register.html
+│   └── dashboard.html
+├── app.py
+└── requirements.txt
 ```
 
-## 🔒 Security Features
+## Setup Instructions
 
-- JWT-based authentication
-- Password hashing with PBKDF2-SHA256
-- Input validation and sanitization
-- CORS protection
-- Rate limiting
-- Error handling and logging
-
-## 🔄 API Endpoints
-
-### Authentication
-- POST `/api/auth/register` - Register new user
-- POST `/api/auth/login` - User login
-
-### Dashboard
-- GET `/api/dashboard/<student_id>` - Get dashboard data
-- GET `/api/performance/<student_id>/analytics` - Get performance analytics
-
-### Courses
-- GET `/api/courses/<student_id>` - Get student courses
-- GET `/api/courses/<course_code>/progress/<student_id>` - Get course progress
-- POST `/api/courses/<course_code>/progress/<student_id>` - Update course progress
-
-### Notifications
-- GET `/api/notifications/<student_id>` - Get notifications
-- POST `/api/notifications/<notification_id>/read` - Mark notification as read
-
-### Device Sync
-- POST `/api/sync/<student_id>/device/<device_id>` - Sync device data
-- GET `/api/sync/<student_id>/device/<device_id>` - Get device sync status
-
-## 🧪 Testing
-
+1. Clone the repository:
 ```bash
-# Run backend tests
-python -m pytest tests/
-
-# Run frontend tests
-cd frontend
-npm test
+git clone <repository-url>
+cd student_tracking_system
 ```
 
-## 📈 Performance Monitoring
+2. Install Python dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-The system includes built-in performance monitoring:
-- API response times
-- Database query performance
-- Frontend component rendering
-- Network request tracking
+3. Start MongoDB service
 
-## 🤝 Contributing
+4. Run the application:
+```bash
+python app.py
+```
+
+5. Access the application at `http://localhost:5000`
+
+## Usage
+
+1. Register a new account or login with existing credentials
+2. Use the dashboard to:
+   - Create and manage notes
+   - Add and track tasks
+   - View your calendar
+   - Update your profile
+
+## Development
+
+- The application uses Flask's blueprint structure for scalability
+- MongoDB is used for flexible document storage
+- Frontend is built with vanilla JavaScript for simplicity and performance
+- Responsive design ensures compatibility across devices
+
+## Security Features
+
+- Password hashing for user security
+- Session-based authentication
+- Protected API endpoints
+- CORS protection
+
+## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
-## 📝 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📧 Contact
-
-Mishael Abhishek Zakkam  - mabhishekz.ai22@rvce.edu.in
-Project Link: [https://github.com/yourusername/student_tracking_system](https://github.com/yourusername/student_tracking_system)
+This project is licensed under the MIT License.

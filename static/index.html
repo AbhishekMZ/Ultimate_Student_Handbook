@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Handbook</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #2b8a3e; /* Green background */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin: 10px 0 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1e7e34; /* Darker green */
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffcc00; /* Yellow for hover effect */
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-out;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2b8a3e;
+        }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #2b8a3e;
+            color: white;
+            text-transform: uppercase;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        table a {
+            color: #2b8a3e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        table a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2b8a3e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Interactive Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 15px auto;
+            background-color: #2b8a3e;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #1e7e34;
+            transform: translateY(-2px);
+        }
+
+        /* Animation for fading in sections */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Your Student Handbook!</h1>
+        <p>Your ultimate guide to making the most out of your college life</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#progress">My Progress</a>
+        <a href="#catalog">Goals</a>
+        <a href="#news">Updates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome!</h2>
+        <p>
+            This handbook is your companion for navigating academics, placements, and personal growth. Let’s make college an unforgettable journey together! Explore helpful resources, tips, and roadmaps tailored for you.
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Created by seniors for juniors, this platform bridges the gap between guidance and success. Find everything you need to ace your semesters and beyond, all in one place.
+        </p>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress">
+        <h2>Track Your Progress</h2>
+        <ul>
+            <li>Placement Prep Guides</li>
+            <li>Semester Study Plans</li>
+            <li>Research Resources</li>
+            <li>Exclusive Access to E-Journals</li>
+        </ul>
+        <button class="btn">Explore Now</button>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog">
+        <h2>Academic Goals</h2>
+        <p>Check out these resources to plan your academic journey:</p>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Resources</th>
+            </tr>
+            <tr>
+                <td>Exams</td>
+                <td>Semester-end tips and study material</td>
+                <td><a href="https://www.geeksforgeeks.org">Download</a></td>
+            </tr>
+            <tr>
+                <td>Placements</td>
+                <td>Mock interviews and prep guides</td>
+                <td><a href="https://www.toplad.in">Explore</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- News Section -->
+    <section id="news">
+        <h2>News & Updates</h2>
+        <ul>
+            <li>Exciting workshops coming soon!</li>
+            <li>Tips for a stress-free exam season.</li>
+            <li>Latest research opportunities for students.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Need help? Reach out to us anytime:</p>
+        <p>Email: <a href="mailto:help@studenthandbook.com">help@studenthandbook.com</a></p>
+        <p>Phone: +91-80-1234-5678</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Your College Handbook. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

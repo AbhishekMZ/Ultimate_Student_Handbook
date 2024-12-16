@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Handbook - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <div class="nav-brand">Student Handbook</div>
+        <div class="nav-links">
+            <a href="#" class="active" id="notes-tab">Notes</a>
+            <a href="#" id="tasks-tab">Tasks</a>
+            <a href="#" id="calendar-tab">Calendar</a>
+            <a href="#" id="profile-tab">Profile</a>
+        </div>
+        <div class="nav-user">
+            <span>Welcome, {{ username }}</span>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-content">
+        <!-- Notes Section -->
+        <section id="notes-section" class="content-section active">
+            <div class="section-header">
+                <h2>My Notes</h2>
+                <button class="add-btn" id="add-note-btn">Add Note</button>
+            </div>
+            <div class="notes-grid" id="notes-container">
+                <!-- Notes will be populated here -->
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks-section" class="content-section">
+            <div class="section-header">
+                <h2>My Tasks</h2>
+                <button class="add-btn" id="add-task-btn">Add Task</button>
+            </div>
+            <div class="tasks-list" id="tasks-container">
+                <!-- Tasks will be populated here -->
+            </div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section id="calendar-section" class="content-section">
+            <div class="section-header">
+                <h2>Calendar</h2>
+            </div>
+            <div class="calendar-container">
+                <!-- Calendar will be implemented here -->
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile-section" class="content-section">
+            <div class="section-header">
+                <h2>My Profile</h2>
+            </div>
+            <div class="profile-container">
+                <div class="profile-info">
+                    <h3>{{ username }}</h3>
+                    <!-- Add more profile information here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Note Modal -->
+    <div class="modal" id="add-note-modal">
+        <div class="modal-content">
+            <h3>Add New Note</h3>
+            <form id="add-note-form">
+                <input type="text" name="title" placeholder="Note Title" required>
+                <textarea name="content" placeholder="Note Content" required></textarea>
+                <div class="modal-buttons">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save Note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal" id="add-task-modal">
+        <div class="modal-content">
+            <h3>Add New Task</h3>
+            <form id="add-task-form">
+                <input type="text" name="title" placeholder="Task Title" required>
+                <textarea name="description" placeholder="Task Description" required></textarea>
+                <input type="date" name="due_date" required>
+                <div class="modal-buttons">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
